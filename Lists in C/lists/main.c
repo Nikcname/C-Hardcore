@@ -52,17 +52,6 @@ Nameval *lookup(Nameval *lisp, char *name){
 
 int main()
 {      
-    Nameval list;
-    Nameval name1;
-    name1.name = "one";
-    name1.value = "1";
-    
-    Nameval name2;
-    name1.name = "two";
-    name1.value = "2";
-    
-	addfront(&name1, &list);
-	addfront(&name2, &list);
     
     
 }
