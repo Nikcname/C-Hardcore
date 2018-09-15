@@ -41,6 +41,7 @@ Nameval *addend(Nameval *listp, Nameval *newp){
     return listp;
 }
 
+//поис элемента, возврат указателя на элемент
 Nameval *lookup(Nameval *listp, char *name){
     for( ; listp!=NULL; listp = listp->next){
         if(strcmp(name, listp->name) == 0){
@@ -66,6 +67,7 @@ void apply(Nameval *listp, void (*fn)(Nameval*, void*), void *arg){
     }
 }
 
+//счётчик количества элементов
 void inccounter(Nameval *p, void *arg){
     int *ip;
     
@@ -77,9 +79,31 @@ void inccounter(Nameval *p, void *arg){
 void freeAll(Nameval *listp){
     Nameval *next;
     
-    for(; listp != NULL; listp = listp->next){
-        
+    for(; listp != NULL; listp = next){
+        next = listp -> next;
+        free(listp);
     }
+}
+
+//освобождение лдного элемента
+Nameval *delitem(Nameval *listp, char *name){
+    Nameval *p, *prev;
+    
+    prev = NULL;
+    for(p = listp; p != NULL; p = p->next){
+        if(strcmp(name, p->name) == 0){
+            if(prev == NULL){
+                listp = p->next;
+            } else{
+                prev->next = p->next;
+                free(p);
+                return listp;
+            }
+        }
+        prev = p;
+    }
+    //eprintf("delitem: %s not in list", name);
+    return NULL;
 }
 
 int main(int argc, char **argv)
@@ -91,13 +115,14 @@ int main(int argc, char **argv)
     nvlist = addfront(nvlist, newitem("false", 4));
     
     apply(nvlist, printnv, "%s: %d\n");
-    
+    //freeAll(nvlist);
+    printf("\n");
+    delitem(nvlist, "good");
+    apply(nvlist, printnv, "%s: %d\n");
     //int np;
     //np = 0;
     //apply(nvlist, inccounter, &np);
     //printf("List have: %d elements\n", n);
-    
-    //apply(nvlist, printnv, "%s: %x");
     //из за malloc() не возможно выполнить apply с разными функциями
     //вызывает ошибку
     //nvlist = lookup(nvlist, "bad");
