@@ -5,8 +5,8 @@
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
       <wxString Value="/home/ferrux/Github/C-Hardcore/Lists in C/lists/main.c" Name="FileName"/>
-      <int Value="9" Name="FirstVisibleLine"/>
-      <int Value="50" Name="CurrentLine"/>
+      <int Value="81" Name="FirstVisibleLine"/>
+      <int Value="91" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
