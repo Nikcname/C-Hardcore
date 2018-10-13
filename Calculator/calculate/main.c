@@ -104,9 +104,9 @@ int main(int argc, char **argv)
     int i;
     
     Node *first = NULL;
-    first = getFreeNode('+', NULL);
-    first->left = getFreeNode(5, &first);
-    first->right = getFreeNode(3, &first);
+    first = getFreeNode(string[1], NULL);
+    first->left = getFreeNode(string[0] - '0', &first);
+    first->right = getFreeNode(string[2] - '0', &first);
     
     Node *prev = first;
     Node *root = NULL;
