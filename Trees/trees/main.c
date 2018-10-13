@@ -43,7 +43,7 @@ Nameval *lookup(Nameval *treep, char *name){
     }
 }
 
-/* applyInOrder: симметричное применение функции fn к treep */
+/* applyInOrder: симметричное применение функции fn к treep https://www.cbar.az/hr/f?p=100:101:11044056071480:::::*/
 void applyInOrder(Nameval *treep, void (*fn)(Nameval*, void*), void *arg){
     if (treep == NULL){
         return;
