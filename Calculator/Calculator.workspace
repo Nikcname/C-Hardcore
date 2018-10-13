@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Workspace Name="Markov Chain" Database="" Version="10.0.0">
-  <Project Name="markovcahin" Path="markovcahin/markovcahin.project" Active="Yes"/>
+<CodeLite_Workspace Name="Calculator" Database="" Version="10.0.0">
+  <Project Name="calculate" Path="calculate/calculate.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
-      <Project Name="markovcahin" ConfigName="Debug"/>
+      <Project Name="calculate" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
-      <Project Name="markovcahin" ConfigName="Release"/>
+      <Project Name="calculate" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

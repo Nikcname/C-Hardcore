@@ -3,17 +3,17 @@
 ## any manual changes will be erased      
 ##
 ## Debug
-ProjectName            :=markovcahin
+ProjectName            :=calculate
 ConfigurationName      :=Debug
-WorkspacePath          :="/home/ferrux/Github/C-Hardcore/Markov Chain"
-ProjectPath            :="/home/ferrux/Github/C-Hardcore/Markov Chain/markovcahin"
+WorkspacePath          :=/home/ferrux/Github/C-Hardcore/Calculator
+ProjectPath            :=/home/ferrux/Github/C-Hardcore/Calculator/calculate
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Ferrux
-Date                   :=23/09/18
+Date                   :=13/10/18
 CodeLitePath           :=/home/ferrux/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -32,7 +32,7 @@ Preprocessors          :=
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E
-ObjectsFileList        :="markovcahin.txt"
+ObjectsFileList        :="calculate.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=mkdir -p
 LinkOptions            :=  
@@ -92,7 +92,7 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main.c$(ObjectSuffix): main.c $(IntermediateDirectory)/main.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "/home/ferrux/Github/C-Hardcore/Markov Chain/markovcahin/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
+	$(CC) $(SourceSwitch) "/home/ferrux/Github/C-Hardcore/Calculator/calculate/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.c$(DependSuffix): main.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.c$(ObjectSuffix) -MF$(IntermediateDirectory)/main.c$(DependSuffix) -MM main.c
 

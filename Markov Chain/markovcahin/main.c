@@ -90,10 +90,41 @@ void build(char *prefix[NPREF], FILE *file){
     sprintf(fmt, "%%%ds", (int) sizeof(buf)-1);
     while(fscanf(file, fmt, buf) != EOF){
         
-        //add(prefix, buf);
+        add(prefix, buf);
     }
     
 }
+
+
+
+
+/* add: пополняет список суффиксов, обновляет префикс */
+void add(char *prefix[NPREF], char *suffix){
+    
+    State *sp;
+    
+    sp = lookup(prefix, 1);         /* создаем, если не нашли */
+    addsuffix(sp, suffix);
+    
+    memmove(prefix, prefix+1, (NPREF - 1) * sizeof(prefix[0]));
+    prefix[NPREF-1] = suffix;
+    
+}
+
+
+
+
+/* addsuffix: добавляет суффикс к состоянию; суффикс изменять нельзя */
+void addsuffix(State *sp, char *suffix){
+    
+    Suffix *suf;
+    
+    suf = (Suffix *) malloc(sizeof(Suffix));
+    suf->word = suffix;
+    suf->next = sp ->suf;
+    sp->suf = suf;
+}
+
 
 
 

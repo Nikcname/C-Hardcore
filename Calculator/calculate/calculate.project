@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Project Name="markovcahin" Version="10.0.0" InternalType="Console">
+<CodeLite_Project Name="calculate" Version="10.0.0" InternalType="Console">
   <Description/>
   <Dependencies/>
-  <VirtualDirectory Name="src">
-    <File Name="main.c"/>
-    <File Name="enum.h"/>
-    <File Name="state.h"/>
-    <File Name="suffix.h"/>
-    <File Name="view.tmp"/>
-    <File Name="template.txt"/>
-  </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="" C_Options="" Assembler="">
@@ -100,6 +92,7 @@
       </Completion>
     </Configuration>
   </Settings>
-  <Dependencies Name="Debug"/>
-  <Dependencies Name="Release"/>
+  <VirtualDirectory Name="src">
+    <File Name="main.c"/>
+  </VirtualDirectory>
 </CodeLite_Project>
